@@ -109,3 +109,108 @@ form .name-details .field:last-child {
 .form .link a:hover {
   text-decoration: underline;
 }
+
+/* User Area */
+.user {
+  padding: 25px 35px;
+}
+.user header,
+.users-list a {
+  display: flex;
+  align-items: center;
+  padding-bottom: 20px;
+  justify-content: space-between;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.wrapper img {
+  object-fit: cover;
+  border-radius: 50%;
+}
+:is(.user, .users-list) .content {
+  display: flex;
+  align-items: center;
+}
+.user header .content img {
+  height: 50px;
+  width: 50px;
+}
+:is(.user, .users-list) .details {
+  color: #333;
+  margin-left: 15px;
+}
+:is(.user, .users-list) .details span {
+  font-size: 18px;
+  font-weight: 500;
+}
+.user header .logout {
+  font-size: 17px;
+  background: #333;
+  color: #fff;
+  padding: 7px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.user .search {
+  margin: 20px 0;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.user .search .text {
+  font-size: 18px;
+}
+.user .search input {
+  position: absolute;
+  height: 42px;
+  width: calc(100% - 50px);
+  border: 1px solid #ccc;
+  padding: 0 13px;
+  font-size: 16px;
+  border-radius: 5px;
+  outline: none;
+}
+.user .search button {
+  height: 42px;
+  width: 47px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  color: #fff;
+  background: #333;
+  font-size: 17px;
+  border-radius: 0 5px 0 5px;
+}
+.users-list {
+  max-height: 350px;
+  overflow-y: auto;
+}
+.users-list:: ::-webkit-scrollbar {
+  width: 0px;
+}
+.users-list a {
+  padding-right: 15px;
+  margin-bottom: 10px;
+  page-break-after: 10px;
+  border-bottom-color: #f1f1f1;
+}
+.users-list a:last-child {
+  border: none;
+  margin-bottom: 0px;
+}
+.users-list a .content img {
+  height: 40px;
+  width: 40px;
+}
+.users-list a .content p {
+  color: #67676a;
+}
+.users-list a .status-dot {
+  font-size: 12px;
+  color: #468669;
+}
+/* We'll use this class name in php to show offline status */
+.users-list a .status-dot.offline {
+   color: #ccc;
+}
